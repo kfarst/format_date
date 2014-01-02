@@ -1,7 +1,7 @@
 require "format_event/version"
 
 module FormatEvent
-  class Date < ::Liquid::Tag
+  class Date < Liquid::Tag
     def initialize(tag_name, date)
       @date = date
     end
@@ -24,5 +24,5 @@ module FormatEvent
   end
 end
 
-::Liquid::Template.register_tag('format_event_date', FormatEvent::Date)
-::Liquid::Template.register_tag('format_event_time', FormatEvent::Time)
+Liquid::Template.register_tag('format_event_date', FormatEvent::Date)
+Liquid::Template.register_tag('format_event_time', FormatEvent::Time)
